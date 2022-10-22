@@ -4,3 +4,5 @@
 **/terraform.tfstate
 .git
 .DS_Store
+**/.terraform.lock.hcl
+**/terraform.tfstate
