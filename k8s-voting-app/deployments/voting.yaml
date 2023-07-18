@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: voting
+  name: voting
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: voting
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: voting
+    spec:
+      containers:
+      - image: kodekloud/examplevotingapp_vote:v1
+        name: examplevotingapp-vote-ptr8h
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}

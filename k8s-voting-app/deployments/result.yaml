@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: result
+  name: result
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: result
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: result
+    spec:
+      containers:
+      - image: kodekloud/examplevotingapp_result:v1
+        name: examplevotingapp-result-zp7sw
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
